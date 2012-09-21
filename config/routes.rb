@@ -1,9 +1,15 @@
 Arvind::Application.routes.draw do
-  get "pages/home"
-
-  get "pages/contact"
-  get "pages/about"
-  # The priority is based upon order of creation:
+ 
+#this is new for me
+  ["home","contact","about","help"].each do |page|
+    get"pages/#{page}"
+  end
+  # get "pages/home"
+ 
+  # get "pages/contact"
+  # get "pages/about"
+  # get "pages/help"
+  # # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
