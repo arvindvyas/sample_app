@@ -1,11 +1,18 @@
 Arvind::Application.routes.draw do
  
 #this is new for me
-  ["home","contact","about","help"].each do |page|
-    get"pages/#{page}"
-  end
-  # get "pages/home"
+root :to => 'pages#home' # get "pages/home"
  
+['contact','about','help'].each do |value|
+get "/#{value}", :to => 'pages#'"#{value}"
+  end
+  #match '/about',   :to => 'pages#about'
+  #match '/help',    :to => 'pages#help'
+ # match '/home', :to=> 'pages/home'
+#root_path => '/'
+#root_url  => 'http://localhost:3000/'
+
+  
   # get "pages/contact"
   # get "pages/about"
   # get "pages/help"
