@@ -1,11 +1,14 @@
 Arvind::Application.routes.draw do
  
+  #get "user/new"
+
 #this is new for me
 root :to => 'pages#home' # get "pages/home"
  
 ['contact','about','help'].each do |value|
 get "/#{value}", :to => 'pages#'"#{value}"
   end
+  get "/signup" , :to => 'users#new'
   #match '/about',   :to => 'pages#about'
   #match '/help',    :to => 'pages#help'
  # match '/home', :to=> 'pages/home'
