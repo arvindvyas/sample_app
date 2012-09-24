@@ -16,20 +16,21 @@ group :development do
 end
 
 group :test do
-	gem 'spork', '~> 1.0rc'
- gem 'rspec-rails', '2.6.1'
+  gem 'spork', '~> 1.0rc'
+  gem 'rspec-rails', '2.6.1'
   gem 'webrat', '0.7.1'
   gem 'autotest', '4.4.6'
- gem 'autotest-rails-pure', '4.1.2'
+  gem 'autotest-rails-pure', '4.1.2'
   #gem 'autotest-fsevent', '0.2.4'
- 	 gem 'autotest-growl', '0.2.16'
+  gem 'autotest-growl', '0.2.16'
+  gem 'factory_girl_rails', '1.0'
+
 end
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
+gem 'uglifier', '>= 1.0.3'
 
-  gem 'uglifier', '>= 1.0.3'
-
-
+gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
