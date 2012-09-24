@@ -1,6 +1,9 @@
 module ApplicationHelper
 
   #Return the title per page bisic
+   def logo
+    # Fill in.
+  end
   def title 
   	base_title = "Ruby on Rails Tutorial Sample App"
 
