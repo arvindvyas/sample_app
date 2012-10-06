@@ -1,15 +1,23 @@
+
+
 require 'spec_helper'
 
-# Specs in this file have access to a helper object that includes
-# the UsersHelper. For example:
-#
-# describe UsersHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       helper.concat_strings("this","that").should == "this that"
-#     end
-#   end
-# end
-describe UsersHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+describe UsersController do
+  render_views
+
+  describe "GET 'show'" do
+
+    before(:each) do
+      @user = Factory(:user)
+    end
+
+    it "should be successful" do
+      get :show, :id => @user
+      response.should be_success
+    end
+
+    it "should find the right user" do
+      get :show, :id => @user
+      assigns(:user).should == @user
+    end
+  end

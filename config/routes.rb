@@ -11,7 +11,7 @@ root :to => 'pages#home' # get "pages/home"
 get "/#{value}", :to => 'pages#'"#{value}"
   end
   get "/signup" , :to => 'users#new'
-  get "users/:id", :to => 'users#show'
+  match "/users/:id", :to => 'users#show'
   #match '/about',   :to => 'pages#about'
   #match '/help',    :to => 'pages#help'
  # match '/home', :to=> 'pages/home'
